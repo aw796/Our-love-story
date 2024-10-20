@@ -5,90 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Love Story</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lustria&display=swap');
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #87CEEB;
-      background-image: url('https://i.imgur.com/OvMZBs9.jpg'); /* Ocean background */
-      background-size: cover;
-      color: #fff;
+      font-family: 'Lustria', serif;
+      background-color: #fff;
       text-align: center;
+      color: white;
     }
 
     .container {
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       height: 100vh;
-      backdrop-filter: blur(5px);
-      background-color: rgba(0, 0, 128, 0.5); /* Transparent ocean-blue overlay */
     }
 
     h1 {
       font-size: 3em;
-      margin-bottom: 20px;
     }
 
     .button {
-      margin: 15px;
       padding: 15px 30px;
-      font-size: 1.5em;
-      color: #fff;
-      background-color: #006994;
+      background-color: #ff1493; /* Dark pink */
+      color: white;
       border: none;
       border-radius: 10px;
+      font-size: 1.5em;
       cursor: pointer;
-      transition: background-color 0.3s ease;
     }
 
     .button:hover {
-      background-color: #004d6f;
-    }
-
-    .button:active {
-      background-color: #002f48;
-    }
-
-    footer {
-      margin-top: 50px;
-      font-size: 1em;
-      color: #fff;
+      background-color: #c40075;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Our Love Story</h1>
-
-    <!-- Let's Go Button -->
-    <button class="button" onclick="goToPage('story')">Let's Go</button>
-
-    <!-- Playlist Button -->
-    <button class="button" onclick="goToPage('playlist')">Playlist</button>
-
-    <!-- Our Memories Button -->
-    <button class="button" onclick="goToPage('memories')">Our Memories</button>
-
-    <footer>
-      <p>Made with love by me, for you ♥</p>
-    </footer>
+  <!-- Welcome Page -->
+  <div class="container" id="welcome">
+    <h1>Welcome To Our Love Story</h1>
+    <button class="button" onclick="startJourney()">Let's go</button>
   </div>
 
   <script>
-    function goToPage(page) {
-      if (page === 'story') {
-        alert("This is where our love story begins...");
-        // Add your story page link here!
-      } else if (page === 'playlist') {
-        alert("Playing our favorite songs...");
-        // You can link your playlist here!
-      } else if (page === 'memories') {
-        alert("Here are our best memories...");
-        // Link a photo album or special memory page here!
-      }
+    function startJourney() {
+      window.location.href = 'journey.html'; // Link to the next page
     }
   </script>
 </body>
 </html>
-
