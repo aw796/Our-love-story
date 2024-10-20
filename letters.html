@@ -1,56 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Letters to You</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Lustria', serif;
-      background-color: #87ceeb; /* Ocean-themed background */
-      text-align: center;
-      color: white;
-    }
-
-    h1 {
-      margin-top: 20px;
-      font-size: 3em;
-    }
-
-    .button {
-      margin: 10px;
-      padding: 15px 30px;
-      background-color: #87cefa; /* Light blue */
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-size: 1.2em;
-      cursor: pointer;
-    }
-
-    .button:hover {
-      background-color: #00aaff;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Letters to You</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>My Letters to You</h1>
 
-  <!-- Buttons for each month -->
-  <button class="button" onclick="openLetter(1)">Month One</button>
-  <button class="button" onclick="openLetter(2)">Month Two</button>
-  <button class="button" onclick="openLetter(3)">Month Three</button>
-  <button class="button" onclick="openLetter(4)">Month Four</button>
-  <button class="button" onclick="openLetter(5)">Month Five</button>
-  <button class="button" onclick="openLetter(6)">Month Six</button>
-  <button class="button" onclick="openLetter(7)">Month Seven</button>
-  <button class="button" onclick="openLetter(8)">Month Eight</button>
+    <h1>My Letters to You</h1>
 
-  <script>
-    function openLetter(month) {
-      alert(`This will open the letter for Month ${month}`); // You can load the letter from a file or a text area
-    }
-  </script>
+    <!-- Buttons for each month's letter -->
+    <div class="letters-section">
+        <button class="letter-button" onclick="window.location.href='month1.html'">Month One</button>
+        <button class="letter-button" onclick="window.location.href='month2.html'">Month Two</button>
+        <!-- Add buttons for up to Month Eight -->
+    </div>
+
+    <!-- Button to navigate to the next section -->
+    <button class="button" onclick="window.location.href='future.html'">To Our Future</button>
+
 </body>
 </html>
+
