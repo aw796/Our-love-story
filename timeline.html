@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Timeline</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lustria', serif;
+      background-color: #ff1493; /* Pink background */
+      text-align: center;
+      color: white;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 3em;
+    }
+
+    .timeline {
+      display: flex;
+      overflow-x: auto;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      margin: 20px 0;
+    }
+
+    .timeline img {
+      width: 150px;
+      margin: 0 10px;
+      transition: transform 0.5s ease;
+    }
+
+    .timeline img:hover {
+      transform: scale(1.5);
+    }
+
+    .button {
+      padding: 15px 30px;
+      background-color: #ff1493; /* Dark pink */
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Timeline</h1>
+
+  <div class="timeline">
+    <!-- 8 points on the timeline -->
+    <img src="https://via.placeholder.com/150" alt="Month One" title="Month One">
+    <img src="https://via.placeholder.com/150" alt="Month Two" title="Month Two">
+    <img src="https://via.placeholder.com/150" alt="Month Three" title="Month Three">
+    <img src="https://via.placeholder.com/150" alt="Month Four" title="Month Four">
+    <img src="https://via.placeholder.com/150" alt="Month Five" title="Month Five">
+    <img src="https://via.placeholder.com/150" alt="Month Six" title="Month Six">
+    <img src="https://via.placeholder.com/150" alt="Month Seven" title="Month Seven">
+    <img src="https://via.placeholder.com/150" alt="Month Eight" title="Month Eight">
+  </div>
+
+  <button class="button" onclick="nextPage()">Let's go forth, shall we</button>
+
+  <script>
+    function nextPage() {
+      window.location.href = 'memories.html'; // Link to the next page (memories)
+    }
+  </script>
+</body>
+</html>
