@@ -5,22 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flying Over to You</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to your external CSS file -->
+    <style>
+        /* Additional styles for the button */
+        .button {
+            background-color: darkpink; /* Change to your preferred dark pink */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #animation {
+            text-align: center;
+            margin: 50px;
+        }
+        #person-image {
+            position: relative; /* Positioning the image of you */
+            top: -100px; /* Adjust based on the animation */
+            transition: 1s; /* Smooth transition for the image change */
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Page content -->
     <h1>Flying Over to You</h1>
     
     <!-- Placeholder for the spinning globe and airplane animation -->
     <div id="animation">
-        <!-- Globe animation with airplane flying from London to the Maldives -->
         <img src="images/spinning-globe.gif" alt="Spinning Globe">
-        <img src="images/airplane.png" alt="Airplane">
+        <img src="images/airplane.png" alt="Airplane" style="animation: fly 5s linear infinite;">
         <img id="person-image" src="images/your-picture.jpg" alt="Your Picture">
     </div>
 
     <!-- Button to navigate to the next page (Timeline) -->
     <button class="button" onclick="window.location.href='timeline.html'">Let's go forth, shall we</button>
 
+    <script>
+        // JavaScript to change the image when the plane reaches Maldives
+        setTimeout(function() {
+            document.getElementById('person-image').src = 'images/your-and-gf-picture.jpg'; // Change to your picture with her
+        }, 5000); // Adjust the time to match your animation timing
+    </script>
 </body>
 </html>
